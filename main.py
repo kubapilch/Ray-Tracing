@@ -3,7 +3,7 @@ from classes import Wall, Button, Ray
 import math
 
 # --- CUSTOMIZABLE VARIABLES ---
-number_of_rays = 60 # Max 360
+number_of_rays = 120 # Max 360
 wall_thicknes = 2
 boundarySpacing = 10
 # ------------------------------
@@ -54,9 +54,11 @@ addBoundaries()
 
 # Draw Menu
 def drawMenu():
+    # Set colot and transparency of the menu box
     menuSurface.fill(WHITE)
     menuSurface.set_alpha(126)
 
+    # Draw menu box
     surface.blit(menuSurface, (0, size[1]-menuSize[1]))
 
     # Draw buttons
@@ -142,13 +144,13 @@ while carryOn:
                 x4, y4 = wall.B
 
                 # Magical formula from wikipedia https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
-                den = (x1 - x2)*(y3 - y4) - (y1 - y2)*(x3 - x4)
-                if den == 0:
+                div = (x1 - x2)*(y3 - y4) - (y1 - y2)*(x3 - x4)
+                if div == 0:
                     # Parallel
                     continue
                 
-                t = ((x1 - x3)*(y3 - y4) - (y1 - y3)*(x3 - x4))/den
-                u = -((x1 - x2)*(y1 - y3) - (y1 - y2)*(x1 - x3))/den
+                t = ((x1 - x3)*(y3 - y4) - (y1 - y3)*(x3 - x4))/div
+                u = -((x1 - x2)*(y1 - y3) - (y1 - y2)*(x1 - x3))/div
 
                 # Check if there is an intersection point
                 if 0.0 < t and u > 0.0 and u < 1:
