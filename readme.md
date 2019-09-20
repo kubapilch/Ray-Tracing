@@ -1,6 +1,8 @@
 # Ray-tracing in pygame
 This is my implementation of ray tracing in pygame
 
+![](examples/ray4.gif)
+
 ## Requirements
 - `python 3.5+`
 - pygame `pip install pygame`
