@@ -17,7 +17,7 @@ To build a wall you have to press left mouse button to set starting position for
 
 #### Playing
 Press Play button in down-left corner and move your mouse around to change a location of the source of light.
-![](examples/ray2.gif)
+![](examples/ray3.gif)
 ![](examples/ray1.gif)
 
 You can stop the game and add more walls if you want.
