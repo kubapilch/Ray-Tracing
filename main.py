@@ -134,7 +134,7 @@ while carryOn:
 
             closest = 100000000000000000000000000 # Very big number
             # Check every wall
-            for i, wall in enumerate(walls):
+            for wall in walls:
                 x1, y1 = ray.start_pos
                 x2, y2 = ray.end_point
 
